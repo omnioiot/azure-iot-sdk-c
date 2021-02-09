@@ -51,7 +51,7 @@ declare -a arr=(
     "-Duse_amqp=OFF -Duse_http=OFF -Dno_logging=OFF -Ddont_use_uploadtoblob=ON"
     "-Duse_prov_client=ON -Dbuild_provisioning_service_client=OFF"
     "-Dbuild_as_dynamic=ON"
-    "-Dbuild_as_dynamic=ON -Dskip_samples=ON -Duse_amqp=ON"
+    "-Dbuild_as_dynamic=ON -Duse_amqp=ON"
     "-Dbuild_as_dynamic:BOOL=ON -Ddont_use_uploadtoblob:BOOL=ON"
     "-Dbuild_as_dynamic:BOOL=ON -Ddont_use_uploadtoblob:BOOL=ON -Duse_prov_client:BOOL=ON"
     "-Dbuild_as_dynamic:BOOL=ON -Ddont_use_uploadtoblob:BOOL=ON -Duse_edge_modules:BOOL=ON"
