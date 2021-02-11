@@ -290,11 +290,11 @@ if(${use_http})
         iothub_client_http_transport
     )
 
-    if(build_as_dynamic)
+    if(${build_as_dynamic})
         set(iothub_transport_source ${iothub_transport_source}
             ${iothub_client_http_transport_c_files}
             ${iothub_client_http_transport_h_files})
-    endif(build_as_dynamic)
+    endif(${build_as_dynamic})
 endif()
 
 if(${use_amqp})
@@ -323,7 +323,7 @@ if(${use_amqp})
         iothub_client_amqp_ws_transport
     )
 
-    if (build_as_dynamic)
+    if (${build_as_dynamic})
         set(iothub_transport_source ${iothub_transport_source}
             ${iothub_client_amqp_transport_c_files}
             ${iothub_client_amqp_transport_h_files})
@@ -333,7 +333,7 @@ if(${use_amqp})
             ${iothub_client_amqp_ws_transport_h_files})
 
         set(iothub_client_libs ${iothub_client_libs} uamqp)
-    endif(build_as_dynamic)
+    endif(${build_as_dynamic})
 endif()
 
 if(${use_mqtt})
@@ -363,7 +363,7 @@ if(${use_mqtt})
         iothub_client_mqtt_ws_transport
     )
 
-    if (build_as_dynamic)
+    if (${build_as_dynamic})
         set(iothub_transport_source ${iothub_transport_source}
             ${iothub_client_mqtt_transport_c_files}
             ${iothub_client_mqtt_transport_h_files})
@@ -371,7 +371,7 @@ if(${use_mqtt})
         set(iothub_transport_source ${iothub_transport_source}
             ${iothub_client_mqtt_ws_transport_c_files}
             ${iothub_client_mqtt_ws_transport_h_files})
-    endif(build_as_dynamic)
+    endif(${build_as_dynamic})
 endif()
 
 include_directories(${IOTHUB_CLIENT_INC_FOLDER})
