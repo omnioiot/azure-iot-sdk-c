@@ -73,5 +73,5 @@ do
     cmake $build_root $item
 
     make --jobs=$MAKE_CORES
+    popd
 done
-popd
